@@ -638,14 +638,32 @@ main {
         padding: 20px 16px;
     }
     .header-khung {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+    }
+    .logo {
+        flex-shrink: 0;
+        gap: 6px;
+        font-size: 16px;
+    }
+    .logo img {
+        width: 22px;
+        height: 22px;
     }
     .menu {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px 20px;
+        width: auto;
+        flex: 1;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+    .menu p {
+        font-size: 10px;
+        white-space: nowrap;
     }
     main {
         padding: 0;
@@ -893,5 +911,32 @@ main {
     }
     .images-wellbeing-list {
         align-self: center;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .header {
+        padding: 16px 10px;
+    }
+    .header-khung {
+        flex-direction: row;
+        gap: 5px;
+    }
+    .logo {
+        gap: 5px;
+        font-size: 14px;
+    }
+    .logo img {
+        width: 18px;
+        height: 18px;
+    }
+    .menu {
+        flex: 1;
+        justify-content: flex-end;
+        gap: 5px;
+    }
+    .menu p {
+        font-size: 8px;
     }
 }
